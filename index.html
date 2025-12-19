@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دانلود واتساپ | WhatsApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <nav class="navbar">
+    <div class="logo">WhatsApp DL</div>
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+    <ul class="menu">
+        <li><a href="#hero">خانه</a></li>
+        <li><a href="#download">دانلود</a></li>
+        <li><a href="#features">ویژگی‌ها</a></li>
+        <li><a href="#gallery">گالری</a></li>
+        <li><a href="#about">درباره</a></li>
+    </ul>
+</nav>
+
+
+    <!-- هدر -->
+    <header class="hero">
+        <h1>دانلود واتساپ آخرین نسخه</h1>
+        <p>
+            واتساپ محبوب‌ترین پیام‌رسان دنیا برای تماس، چت و ارسال فایل  
+            سریع، امن و کاملاً رایگان
+        </p>
+        <a href="#download" class="btn big">دانلود مستقیم</a>
+    </header>
+
+    <!-- بخش عکس -->
+    <div class="box">
+        <img src="https://farsgraphic.com/wp-content/uploads/2022/04/icons4-whatsapp-192.png" class="img1">
+        <img src="https://pikfree.ir/wp-content/uploads/edd/2023/01/cartoon-character-holding-mobile-smiling-3d-Top.jpg" class="img2">
+    </div>
+
+    <!-- ویژگی‌ها -->
+    <section id="features" class="features">
+        <h2>چرا واتساپ؟</h2>
+        <div class="cards">
+            <div class="card">🔒 امنیت بالا با رمزگذاری</div>
+            <div class="card">⚡ سرعت عالی در ارسال پیام</div>
+            <div class="card">📞 تماس صوتی و تصویری رایگان</div>
+            <div class="card">📂 ارسال فایل، عکس و ویدیو</div>
+        </div>
+    </section>
+
+    <!-- دانلود -->
+    <section id="download" class="download">
+        <h2>دانلود واتساپ برای ویندوز</h2>
+        <p>نسخه رسمی – بدون ویروس – تست شده</p>
+        <a href="WhatsApp.Desktop.2.2546.3.0.exe" download class="btn">
+            دانلود WhatsApp Desktop
+        </a>
+    </section>
+
+    <!-- درباره -->
+    <section id="about" class="about">
+        <h2>درباره سایت</h2>
+        <p>
+            این سایت با هدف ارائه آخرین نسخه برنامه‌های پرکاربرد  
+            به صورت رایگان و مستقیم طراحی شده است.
+        </p>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        © 2025 WhatsApp DL | طراحی شده توسط AmirReza
+    </footer>
+
+
+
+
+    <script>
+  const menuToggle = document.getElementById('mobile-menu');
+  const menu = document.querySelector('.menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+
+  // اسکرول نرم برای لینک‌ها
+  const links = document.querySelectorAll('.menu a');
+
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+      if(menu.classList.contains('active')) menu.classList.remove('active'); // بستن منو موبایل
+    });
+  });
+</script>
+
+</body>
+</html>
