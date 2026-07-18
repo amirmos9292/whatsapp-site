@@ -20,7 +20,7 @@
 </head>
 <body>
 
-   <nav class="navbar">
+<nav class="navbar">
     <div class="logo">WhatsApp DL</div>
     <div class="menu-toggle" id="mobile-menu">☰</div>
     <ul class="menu">
@@ -32,79 +32,73 @@
     </ul>
 </nav>
 
+<header class="hero" id="hero">
+    <h1>دانلود واتساپ دسکتاپ برای ویندوز</h1>
+    <p>
+        آخرین نسخه WhatsApp Desktop را با لینک مستقیم دانلود کنید.
+        مناسب ویندوز 10 و 11، رایگان و با نصب آسان.
+    </p>
 
-    <!-- هدر -->
-    <header class="hero">
-        <h1>دانلود واتساپ آخرین نسخه</h1>
-        <p>
-            واتساپ محبوب‌ترین پیام‌رسان دنیا برای تماس، چت و ارسال فایل  
-            سریع، امن و کاملاً رایگان
-        </p>
-        <a href="#download" class="btn big">دانلود مستقیم</a>
-    </header>
+    <a href="#download" class="btn big">دانلود مستقیم</a>
+</header>
 
-    <!-- بخش عکس -->
-    <div class="box">
-        <img src="https://farsgraphic.com/wp-content/uploads/2022/04/icons4-whatsapp-192.png" class="img1">
-        <img src="https://pikfree.ir/wp-content/uploads/edd/2023/01/cartoon-character-holding-mobile-smiling-3d-Top.jpg" class="img2">
+<div class="box">
+    <img src="https://farsgraphic.com/wp-content/uploads/2022/04/icons4-whatsapp-192.png" class="img1">
+    <img src="https://pikfree.ir/wp-content/uploads/edd/2023/01/cartoon-character-holding-mobile-smiling-3d-Top.jpg" class="img2">
+</div>
+
+<section id="features" class="features">
+    <h2>چرا واتساپ؟</h2>
+    <div class="cards">
+        <div class="card">🔒 امنیت بالا با رمزگذاری</div>
+        <div class="card">⚡ سرعت عالی در ارسال پیام</div>
+        <div class="card">📞 تماس صوتی و تصویری رایگان</div>
+        <div class="card">📂 ارسال فایل، عکس و ویدیو</div>
     </div>
+</section>
 
-    <!-- ویژگی‌ها -->
-    <section id="features" class="features">
-        <h2>چرا واتساپ؟</h2>
-        <div class="cards">
-            <div class="card">🔒 امنیت بالا با رمزگذاری</div>
-            <div class="card">⚡ سرعت عالی در ارسال پیام</div>
-            <div class="card">📞 تماس صوتی و تصویری رایگان</div>
-            <div class="card">📂 ارسال فایل، عکس و ویدیو</div>
-        </div>
-    </section>
+<section id="download" class="download">
+    <h2>دانلود واتساپ برای ویندوز</h2>
+    <p>نسخه رسمی – بدون ویروس – تست شده</p>
 
-    <!-- دانلود -->
-    <section id="download" class="download">
-        <h2>دانلود واتساپ برای ویندوز</h2>
-        <p>نسخه رسمی – بدون ویروس – تست شده</p>
-      <a href="WhatsApp%20Amirreza.zip" download>دانلود واتساپ دسکتاپ</a>
-            دانلود WhatsApp Desktop
-        </a>
-    </section>
+    <a href="WhatsApp%20Amirreza.zip" class="btn big" download>
+        دانلود WhatsApp Desktop
+    </a>
+</section>
 
-    <!-- درباره -->
-    <section id="about" class="about">
-        <h2>درباره سایت</h2>
-        <p>
-            این سایت با هدف ارائه آخرین نسخه برنامه‌های پرکاربرد  
-            به صورت رایگان و مستقیم طراحی شده است.
-        </p>
-    </section>
+<section id="about" class="about">
+    <h2>درباره سایت</h2>
+    <p>
+        این سایت با هدف ارائه آخرین نسخه برنامه‌های پرکاربرد
+        به صورت رایگان و مستقیم طراحی شده است.
+    </p>
+</section>
 
-    <!-- فوتر -->
-    <footer class="footer">
-        © 2026 WhatsApp DL | طراحی شده توسط AmirRezaMostaghelchi
-    </footer>
+<footer class="footer">
+    © 2026 WhatsApp DL | طراحی شده توسط AmirRezaMostaghelchi
+</footer>
 
+<script>
+const menuToggle = document.getElementById('mobile-menu');
+const menu = document.querySelector('.menu');
 
-
-
-    <script>
-  const menuToggle = document.getElementById('mobile-menu');
-  const menu = document.querySelector('.menu');
-
-  menuToggle.addEventListener('click', () => {
+menuToggle.addEventListener('click', () => {
     menu.classList.toggle('active');
-  });
+});
 
-  // اسکرول نرم برای لینک‌ها
-  const links = document.querySelectorAll('.menu a');
+const links = document.querySelectorAll('.menu a');
 
-  links.forEach(link => {
+links.forEach(link => {
     link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      target.scrollIntoView({ behavior: 'smooth' });
-      if(menu.classList.contains('active')) menu.classList.remove('active'); // بستن منو موبایل
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+
+        if (menu.classList.contains('active')) {
+            menu.classList.remove('active');
+        }
     });
-  });
+});
 </script>
 
 </body>
